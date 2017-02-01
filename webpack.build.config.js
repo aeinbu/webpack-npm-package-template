@@ -5,10 +5,13 @@ const merge = (...objs) => require("deepmerge").all(objs, {arrayMerge: (arr1, ar
 const combinedConfig = merge({}, commonConfig, {
 	output: {
 		path: "./dist",
-		libraryTarget: "var",
+		libraryTarget: "commonjs2",
 		filename: "bundle.js"
 	},
 	devtool: "#source-map",
+	externals: [
+		nodeExternals()
+	]
 });
 
 module.exports = combinedConfig;

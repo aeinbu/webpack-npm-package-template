@@ -1,15 +1,19 @@
-# Framework neutral template for building apps with Webpack and Babel
+# Framework neutral template for building npm packages with Webpack and Babel
 
 ## Features
 
 - Builds clientside web applications with webpack and babel.
-- A webserver with hot reload when developing your app.
+- A webserver to serve a testpage when developing your component.
 - Also builds seperate css, fonts and other files.
   (Either from seperate entry points for css, or from `require` statements in JavaScript code.)
+- Resulting library can be required with CommonJS.
+- Externalizes all node_modules components for release builds. (Other node modules this package depends on, will be brought in as NPM dependecies and required in the resulting library.)
+
 
 ## Goals
-- This template will act as a starting point for creating web apps.
-- The project template should include a development web server.
+
+- This template will act as a starting point for creating npm packages.
+- The output must be compatible with commonJS, and also work when concatenated. with other javascript files.
 - The template should contain as few devDependencies as possible,
   so that it will be easy to evolve the build configuration as different packages are updated or made obsolete.
 
