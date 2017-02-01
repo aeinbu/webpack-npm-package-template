@@ -1,5 +1,5 @@
 {
-  "name": "npm-package-for-ng-template",
+  "name": "webpack-npm-package-template",
   "version": "1.1.0",
   "description": "Framework neutral template for apps built with Webpack and Babel",
   "main": "index.js",
