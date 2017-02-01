@@ -60,6 +60,8 @@ Add the following object to rules in webpack.common.config:
 },
 ```
 
+Also, optionally change the entry point (in webpack.common.config) to "index.jsx"
+
 ### Adding support for Angular 1.x
 
 Run on the commandline:
