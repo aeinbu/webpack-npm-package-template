@@ -37,7 +37,7 @@
 - Loaders and plugins that are common to all build configuration should be added to `webpack.common.config.js`
 - `webpack.serve.config.js` and `webpack.build.config.js` contain additional configuration that is specific for the different builds.
 
-### Adding support for React
+### Adding support for React JSX
 
 Run on the commandline:
 
@@ -63,6 +63,8 @@ Add the following object to rules in webpack.common.config:
 Also, optionally change the entry point (in webpack.common.config) to "index.jsx"
 
 ### Adding support for Angular 1.x
+
+Adding the `ng-annotate-loader` saves you from doubly declaring your angular dependency injections.
 
 Run on the commandline:
 
