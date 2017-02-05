@@ -53,13 +53,13 @@ Add the following object to rules in webpack.common.config:
 }
 ```
 
-Optionally, add `.ts` extention to the `resolve` element so that typescript files are resolved without the `.ts` extension:
-
-```javascript
-resolve: {
-  extensions: ['.ts', '.js']
-}
-```
+- Optionally, change the entry point (in webpack.common.config) to "index.ts"
+- Optionally, add `.ts` extention to the `resolve` element so that typescript files can be required without the `.ts` extension:
+  ```javascript
+  resolve: {
+    extensions: ['.ts', '.js']
+  }
+  ```
 
 ### Adding support for React JSX
 
@@ -84,7 +84,13 @@ Add the following object to rules in webpack.common.config:
 },
 ```
 
-Also, optionally change the entry point (in webpack.common.config) to "index.jsx"
+- Optionally, change the entry point (in webpack.common.config) to "index.jsx"
+- Optionally, add `.jsx` extention to the `resolve` element so that jsx files can be required without the `.jsx` extension:
+  ```javascript
+  resolve: {
+    extensions: ['.js', '.jsx']
+  }
+  ```
 
 ### Adding support for Angular 1.x
 
