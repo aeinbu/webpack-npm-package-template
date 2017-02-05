@@ -37,6 +37,30 @@
 - Loaders and plugins that are common to all build configuration should be added to `webpack.common.config.js`
 - `webpack.serve.config.js` and `webpack.build.config.js` contain additional configuration that is specific for the different builds.
 
+### Adding support for Typescript
+
+Run on the commandline:
+```bash
+npm install -D typescript awesome-typescript-loader source-map-loader
+```
+
+Add the following object to rules in webpack.common.config:
+
+```javascript
+{
+  test: /\.ts$/,
+  use: "awesome-typescript-loader"
+}
+```
+
+Optionally, add `.ts` extention to the `resolve` element so that typescript files are resolved without the `.ts` extension:
+
+```javascript
+resolve: {
+  extensions: ['.ts', '.js']
+}
+```
+
 ### Adding support for React JSX
 
 Run on the commandline:
