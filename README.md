@@ -45,7 +45,7 @@ Run on the commandline:
 npm install -D typescript awesome-typescript-loader source-map-loader
 ```
 
-Add the following object to rules in webpack.common.config:
+Add the following object to `rules` in webpack.common.config:
 
 ```javascript
 {
@@ -72,7 +72,7 @@ npm install -D babel-preset-react
 npm install -S react react-dom
 ```
 
-Add the following object to rules in webpack.common.config:
+Add the following object to `rules` in webpack.common.config:
 
 ```javascript
 {
@@ -106,7 +106,7 @@ npm install -D ng-annotate-loader
 npm install -S angular
 ```
 
-Exchange the first object in rules in webpack.common.config with:
+Exchange the first object in `rules` in webpack.common.config with:
 
 ```javascript
 {
