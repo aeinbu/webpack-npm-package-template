@@ -1,7 +1,7 @@
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-const babelPresetLatest = ["latest", {"es2015": {"modules": false}}];
+const babelPresetLatest = ["env", {"es2015": {"modules": false}}];
 
 module.exports = {
 	entry: [
@@ -30,8 +30,8 @@ module.exports = {
 			{
 				test: /\.css$/,
 				use: ExtractTextPlugin.extract({
-					fallbackLoader: "style-loader",
-					loader: "css-loader",
+					fallback: "style-loader",
+					use: "css-loader",
 					publicPath: "/dist"
 				})
 			},
