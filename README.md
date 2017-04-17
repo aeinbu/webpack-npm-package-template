@@ -2,7 +2,7 @@
 
 ## Features
 
-- Builds clientside web applications with webpack and babel.
+- Builds a clientside npm package with webpack and babel.
 - Treeshaking with webpack
 - A webserver to serve a testpage when developing your component.
 - Also builds seperate css, fonts and other files.
@@ -13,7 +13,7 @@
 
 ## Goals
 
-- This template will act as a starting point for creating npm packages.
+- This template will act as a starting point for creating a clientside npm package.
 - The output must be compatible with commonJS, and also work when concatenated. with other javascript files.
 - The template should contain as few devDependencies as possible,
   so that it will be easy to evolve the build configuration as different packages are updated or made obsolete.

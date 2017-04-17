@@ -1,13 +1,8 @@
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const babelPresetLatest = ["env", {"es2015": {"modules": false}}];
 
 module.exports = {
-	entry: [
-		"./source/index.js",
-		"./source/index.css"
-	],
 	resolve: {
 		extensions: ['.js']
 	},
@@ -48,12 +43,9 @@ module.exports = {
 	},
 	plugins: [
 		new ExtractTextPlugin({
-			filename: "bundle.css",
+			filename: "index.css",
 			disable: false,
 			allChunks: true
-		}),
-		new HtmlWebpackPlugin({
-			template: "./source/index.html"
 		})
 	]
 }

@@ -1,8 +1,8 @@
 {
   "name": "webpack-npm-package-template",
   "version": "1.1.0",
-  "description": "Framework neutral template for apps built with Webpack and Babel",
-  "main": "index.js",
+  "description": "Framework neutral template for npm packages built with Webpack and Babel",
+  "main": "dist/index.js",
   "scripts": {
     "clean": "rimraf dist/*",
     "build": "npm run clean && webpack --config webpack.build.config.js",
