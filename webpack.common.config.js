@@ -1,7 +1,5 @@
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-const babelPresetLatest = ["env", {"es2015": {"modules": false}}];
-
 module.exports = {
 	resolve: {
 		extensions: ['.js']
@@ -13,7 +11,7 @@ module.exports = {
 				use: {
 					loader: "babel-loader",
 					options: {
-						presets: [babelPresetLatest],
+						presets: [["env", {modules: false}]],
 						plugins: ["transform-object-rest-spread"]
 					}
 				}
