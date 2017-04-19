@@ -8,13 +8,7 @@ module.exports = {
 		rules: [{
 				test: /\.js$/,
 				exclude: /node_modules/,
-				use: {
-					loader: "babel-loader",
-					options: {
-						presets: [["env", {modules: false}]],
-						plugins: ["transform-object-rest-spread"]
-					}
-				}
+				use: "babel-loader"
 			},
 			{
 				test: /\.html$/,
