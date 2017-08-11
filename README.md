@@ -80,7 +80,7 @@ Add the following object to `rules` in webpack.common.config:
   exclude: /node_modules/,
   loader: "babel-loader",
   query: {
-    presets: [babelPresetLatest, "react"],
+    presets: [["env", {"modules": false}], "react"],
     plugins: ["transform-object-rest-spread"]
   }
 },
@@ -112,14 +112,6 @@ Exchange the first object in `rules` in webpack.common.config with:
 {
   test: /\.js$/,
   exclude: /node_modules/,
-  use: [{
-    loader: "ng-annotate-loader"
-  },{
-    loader: "babel-loader",
-    options: {
-      presets: [babelPresetLatest],
-      plugins: ["transform-object-rest-spread"]
-    }
-  }
+  use: ["babel-loader", "ng-annotate-loader"]
 }
 ```
