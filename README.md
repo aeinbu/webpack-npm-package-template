@@ -72,18 +72,13 @@ npm install -D babel-preset-react
 npm install -S react react-dom
 ```
 
-Add the following object to `rules` in webpack.common.config:
+Add `"react"` to the presets array in the `.babelrc` file. If you haven't modified  `.babelrc` yet, it will look like this:
 
 ```javascript
 {
-  test: /\.jsx$/,
-  exclude: /node_modules/,
-  loader: "babel-loader",
-  query: {
-    presets: [["env", {"modules": false}], "react"],
-    plugins: ["transform-object-rest-spread"]
-  }
-},
+	"presets": [["env", {"modules": false}], "react"],
+	"plugins": ["transform-object-rest-spread", "angularjs-annotate"]
+}
 ```
 
 - Optionally, change the entry point (in webpack.common.config) to "index.jsx"
@@ -102,16 +97,15 @@ Adding the `ng-annotate-loader` saves you from doubly declaring your angular dep
 Run on the commandline:
 
 ```bash
-npm install -D ng-annotate-loader
+npm install -D babel-plugin-angularjs-annotate
 npm install -S angular
 ```
 
-Exchange the first object in `rules` in webpack.common.config with:
+Add `"angularjs-annotate"` to the plugins array in the `.babelrc` file. If you haven't modified  `.babelrc` yet, it will look like this:
 
 ```javascript
 {
-  test: /\.js$/,
-  exclude: /node_modules/,
-  use: ["babel-loader", "ng-annotate-loader"]
+	"presets": [["env", {"modules": false}]],
+	"plugins": ["transform-object-rest-spread", "angularjs-annotate"]
 }
 ```
