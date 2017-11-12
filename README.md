@@ -76,8 +76,8 @@ Add `"react"` to the presets array in the `.babelrc` file. If you haven't modifi
 
 ```javascript
 {
-	"presets": [["env", {"modules": false}], "react"],
-	"plugins": ["transform-object-rest-spread", "angularjs-annotate"]
+  "presets": [["env", {"modules": false}], "react"],
+  "plugins": ["transform-object-rest-spread", "angularjs-annotate"]
 }
 ```
 
@@ -105,7 +105,7 @@ Add `"angularjs-annotate"` to the plugins array in the `.babelrc` file. If you h
 
 ```javascript
 {
-	"presets": [["env", {"modules": false}]],
-	"plugins": ["transform-object-rest-spread", "angularjs-annotate"]
+  "presets": [["env", {"modules": false}]],
+  "plugins": ["transform-object-rest-spread", "angularjs-annotate"]
 }
 ```
