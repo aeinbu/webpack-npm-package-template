@@ -22,7 +22,8 @@ const combinedConfigs = merge({}, commonConfig, {
 	devServer: {
 		inline: true,
 		contentBase: "test-wwwroot"
-	}
+	},
+	mode: "development"
 });
 
 module.exports = combinedConfigs;

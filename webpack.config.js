@@ -5,8 +5,8 @@ const merge = (...objs) => require("deepmerge").all(objs, {arrayMerge: (arr1, ar
 
 const combinedConfig = merge({}, commonConfig, {
 	entry: [
-		"./source/index.js",
-		"./source/index.css"
+		"./src/index.js",
+		"./src/index.css"
 	],
 	output: {
 		path: path.resolve(__dirname, "./dist"),
@@ -16,7 +16,8 @@ const combinedConfig = merge({}, commonConfig, {
 	devtool: "#source-map",
 	externals: [
 		nodeExternals()
-	]
+	],
+	mode: "production"
 });
 
 module.exports = combinedConfig;
